@@ -25,26 +25,47 @@ find . -name ".DS_Store" -delete
 > (macOS, Homebrew로 `npm`, `nvm`, `git` 설치)
 > [Homebrew 공홈 바로가기](https://brew.sh/ko/)
 
+<br />
+<hr />
+<br />
+
+## 목차
+- [Ch 01. Node JS](#ch-01-node-js)
+  - [Node.js 다운로드](#nodejs-다운로드)
+  - [npm](#npm)
+  - [npm을 사용하는 이유](#npm을-사용하는-이유)
+  - [CDN vs npm](#cdn-vs-npm)
+    - [CDN 방식](#cdn-방식)
+    - [npm 방식](#npm-방식)
+  - [npm 설치](#npm-설치)
+  - [Parcel, 개발 서버 실행과 빌드](#parcel-개발-서버-실행과-빌드)
+  - [유의적 버전(Semver)](#유의적-버전semver)
+- [Ch 02. JS 데이터](#ch-02-js-데이터)
+
+<br />
+<hr />
+<br />
+
 ## Ch 01. Node JS
 `Node.js`는 Chrome V8 JavaScript 엔진으로 빌드된 **JavaScript 런타임**(프로그래밍 언어가 동작하는 환경).  
 
-### Node.js 다운로드
+### ♦︎ Node.js 다운로드
 - [node 공식 - 다운로드](https://nodejs.org/ko/download)
 - 환경에 맞게 다운로드 설치.
 
-### npm
+### ♦︎ npm
 - `npm`(node package manager)은 전 세계의 개발자들이 만든 다양한 기능(패키지, 모듈)들을 관리.
 - `npm install ???` 으로 설치하여 사용 할 수 있다.
 
-### npm을 사용하는 이유
+### ♦︎ npm을 사용하는 이유
 `node.js` 환경에서는 `npm`을 통해 필요한 패키지를 직접 설치하고 버전을 관리하며 사용한다.<br />
 이 방식은 초기에는 설정과 개념을 이해해야 해서 다소 복잡하지만,<br />
 의존성 관리와 확장성이 뛰어나 프로젝트를 체계적으로 관리할 수 있다.<br />
 그 결과, 비교적 적은 시간으로도 복잡한 기능을 안정적으로 추가하고 고도화할 수 있다.<br />
 이처럼 초기 복잡함을 감수하고 장기적인 효율을 얻는 선택을 트레이드 오프라고 한다.<br />
 
-### CDN vs npm
-##### CDN 방식
+### ♦︎ CDN vs npm
+#### CDN 방식
 - 라이브러리를 외부 서버에서 바로 불러와 사용
 - 설정이 거의 없고 빠르게 시작 가능
 - 프로젝트가 커지면 파일 여러 곳에 링크가 흩어져 버전/의존성 관리가 어려움
@@ -56,7 +77,7 @@ find . -name ".DS_Store" -delete
 - 팀/대규모 프로젝트에 특히 적합
 - [npm 공홈 바로가기](https://www.npmjs.com/)
 
-### npm 설치
+### ♦︎ npm 설치
 ```javascript
 // 1. 기본적인 질문 생략하고 package.json 생성
 // 폴더명에 특수문자, 한글 등으로 error일 경우, npm init 으로 설치하면서 name(폴더 이름) 직접 지정.
@@ -106,7 +127,7 @@ npm istall
 node_modules
 ```
 
-### Parcel, 개발 서버 실행과 빌드
+### ♦︎ Parcel, 개발 서버 실행과 빌드
 - [Parcel(파셀) 공홈, 바로가기](https://parceljs.org/)
 - `index.html` 파일 생성
     ```html
@@ -168,7 +189,7 @@ node_modules
     console.log(user)
     ```
 
-### 유의적 버전(Semver)
+### ♦︎ 유의적 버전(Semver)
 ```html
 Major.Minor.Patch
 4.17.21 
@@ -200,10 +221,9 @@ npm info 패키지이름
 Minor 버전 안에서 가장 최신 버전으로 업데이트 가능
 즉, Patch 버전만 가장 최신 버전으로 업데이트 된다는 개념.
 ```
+
 <br />
-
-===
-
+<hr />
 <br />
 
 ## Ch 02. JS 데이터

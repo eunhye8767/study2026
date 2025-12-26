@@ -19,10 +19,13 @@ killall Finder
 find . -name ".DS_Store" -delete
 ```
 
+<br />
+<br />
+
 **Homebrew는 macOS의 패키지 관리 툴 :**
-> 맥북 사용자라면 필수적으로 설치해야할 프로그램 중 하나이다.
-> 간단한 명령어로 다양한 소프트웨어를 설치, 관리, 제거할 수 있어 매우 유용하다!
-> (macOS, Homebrew로 `npm`, `nvm`, `git` 설치)
+> 맥북 사용자라면 필수적으로 설치해야할 프로그램 중 하나이다.<br />
+> 간단한 명령어로 다양한 소프트웨어를 설치, 관리, 제거할 수 있어 매우 유용하다!<br />
+> (macOS, Homebrew로 `npm`, `nvm`, `git` 설치)<br />
 > [Homebrew 공홈 바로가기](https://brew.sh/ko/)
 
 <br />

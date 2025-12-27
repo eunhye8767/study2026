@@ -32,10 +32,8 @@ find . -name ".DS_Store" -delete
 <hr />
 <br />
 
-<details open>
-    <summary>목차</summary>
-
-- <details>
+## 목차
+<details>
     <summary>Ch 01. Node JS</summary>
 
     - [1-1. Node.js 다운로드](#1-1-nodejs-다운로드)
@@ -44,9 +42,9 @@ find . -name ".DS_Store" -delete
     - [1-4. npm 설치](#1-4-npm-설치)
     - [1-5. Parcel, 개발 서버 실행과 빌드](#1-5-parcel-개발-서버-실행과-빌드)
     - [1-6. 유의적 버전(Semver)](#1-6-유의적-버전semver)
-  </details>
+</details>
 
-- <details>
+<details>
     <summary>Ch 02. JS 데이터</summary>
 
     - [2-1. 원시형 - String, Number](#2-1-원시형---string-number)
@@ -57,8 +55,6 @@ find . -name ".DS_Store" -delete
     - [2-6. 형 변환(Type Conversion)](#2-6-형-변환type-conversion)
     - [2-7. 참과 거짓(Truthy & Falsy)](#2-7-참과-거짓truthy--falsy)
     - [2-8. 데이터 타입 확인](#2-8-데이터-타입-확인)
-  </details>
-
 </details>
 
 <br />

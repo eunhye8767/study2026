@@ -33,6 +33,7 @@ find . -name ".DS_Store" -delete
 <br />
 
 ## 목차
+## 목차
 - [Ch 01. Node JS](#ch-01-node-js)
   - [Node.js 다운로드](#nodejs-다운로드)
   - [npm](#npm)
@@ -44,6 +45,17 @@ find . -name ".DS_Store" -delete
   - [Parcel, 개발 서버 실행과 빌드](#parcel-개발-서버-실행과-빌드)
   - [유의적 버전(Semver)](#유의적-버전semver)
 - [Ch 02. JS 데이터](#ch-02-js-데이터)
+  - [원시형 - 원시 타입 (Primitive Types)](#원시형---원시-타입-primitive-types)
+    - [원시 타입 vs 객체 타입](#원시-타입-vs-객체-타입)
+  - [원시형 - String, Number](#원시형---string-number)
+  - [원시형 - Boolean, null, undefined](#원시형---boolean-null-undefined)
+  - [참조형 - Array](#참조형---array)
+  - [참조형 - Object](#참조형---object)
+  - [참조형 - Function](#참조형---function)
+  - [형 변환(Type Conversion)](#형-변환type-conversion)
+  - [참과 거짓(Truthy & Falsy)](#참과-거짓truthy--falsy)
+  - [데이터 타입 확인](#데이터-타입-확인)
+
 
 <br />
 <hr />
@@ -230,3 +242,310 @@ Minor 버전 안에서 가장 최신 버전으로 업데이트 가능
 <br />
 
 ## Ch 02. JS 데이터
+
+> 원시형 - 원시 타입 (Primitive Types)
+>> 값 자체가 저장됨 (참조가 아님)<br />
+>> 불변(immutable)<br />
+>> 복사 시 값이 그대로 복사됨<br />
+>> 메서드를 호출하면 일시적으로 객체로 감싸졌다가 바로 해제됨
+```text
+string
+number
+bigint
+boolean
+undefined
+symbol
+null
+```
+
+<details>
+  <summary>원시 타입 vs 객체 타입</summary>
+
+| 구분    | 원시 타입              | 객체 타입                         |
+| ----- | ------------------ | ----------------------------- |
+| 저장 방식 | 값 자체               | 참조                            |
+| 변경 가능 | 불변                 | 가변                            |
+| 비교    | 값 비교               | 참조 비교                         |
+| 예시    | `number`, `string` | `object`, `array`, `function` |
+
+</details>
+
+<br />
+
+### 원시형 - String, Number
+```javascript
+// string (문자열)
+const string1 = "Hello"
+const string2 = 'hello'
+const string3 = `hello ${string1} ?!` // 템플릿 리터럴 방식
+
+console.log(string1, string2, string3)
+
+// number (숫자)
+const number = 123
+const pi = 3.14
+
+console.log(number + 1)
+console.log(pi)
+
+/**
+ *  typeof (number + underfined)
+ *    NaN은 typeof가 'number'이지만, 유효한 숫자 결과가 아니라 “계산 불가/변환 실패”를 의미한다.
+ *    따라서 피연산자 중 하나가 숫자로 정상 변환되지 않았을 가능성이 있으므로 값/타입 검증이 필요하다.
+ *    일반적으로 정상 케이스가 아니라 예외(오류 신호)에 가까운 값으로 해석한다.
+ */
+console.log(number + undefined)
+
+/**
+ * 사람은 10진수로 생각하여 0.1 + 0.2 = 0.3을 기대한다.
+ * 자바스크립트는 숫자를 2진수(부동소수점)로 저장하며,
+ * 0.1, 0.2는 2진수로 정확히 표현되지 않아 근사값으로 저장된다.
+ * 이 근사값으로 연산하면서 미세한 오차가 결과에 나타난다.
+ */
+const a = 0.1;
+const b = 0.2;
+
+console.log(a + b); // 기대값: 0.3
+
+/**
+ *  toFixed(1)
+ *    toFixed는 반올림 + 자리수 고정, 반환값은 문자열
+ *    화면 출력(표시용)에는 적합하지만 숫자 계산용으로는 부적함.
+ */
+const result = (0.1 + 0.2).toFixed(1);
+console.log(result); // "0.3"
+
+// 숫자 타입을 유지하면서 0.3으로 만들기
+const result = Number((0.1 + 0.2).toFixed(1));
+console.log(result); // 0.3
+
+/**
+ *  오차 보정 방식 (계산 중심)
+ *    소수점을 정수로 바꿔 계산 → 다시 나눔
+ *    금융, 수량 계산 쪽에서 자주 사용
+ *    자리수가 명확할 때만 안전
+ */ 
+const result = Math.round((0.1 + 0.2) * 10) / 10;
+console.log(result); // 0.3
+```
+
+### 원시형 - Boolean, null, undefined
+```javascript
+// Boolean (블린)
+const a = true
+const b = false
+
+/**
+ *  null
+ *    명시적
+ *    개발자가 의도적으로 '값이 없음'을 할당한 상태
+ *    값이 비어있음을 표현하기 위한 값
+ */
+let age = null
+
+/**
+ *  undefined
+ *    암시적
+ *    변수에 값이 할당되지 않은 상태
+ *    선언만 되었을 때 자바스크립트가 자동으로 부여하는 값
+ */
+let age;
+console.log(age); // undefined
+```
+
+### 참조형 - Array
+```javascript
+// Array (배열)
+
+// 생성자 함수로 배열 생성
+const fruits1 = new Array('Apple', 'Banana','Cherru');
+
+// 대괄호 기호로 배열 생성 - Array Literal(배열 리터럴) 방식
+const fruits2 = ['Apple', 'Banana','Cherru'];
+
+// 인덱싱 대괄호 표기법
+console.log(fruits1[1]); // 아이템 또는 요소(배열의 앨리먼트) 콘솔로그로 읽기.
+
+// length 로 아이템 개수를 반환
+console.log(fruits1.length);     // 총 3개
+console.log(fruits1.length - 1); // 배열의 마지막 인덱스 값을 추출할 떄
+```
+
+### 참조형 - Object
+```javascript
+// object (객체)
+
+//생성자 함수로 객체 데이터 생성
+const user = new Object();
+user.name = 'HEROPY'
+user.age = 85
+
+/**
+ *  {name: "HEROPY", age: 85}
+ *    ㄴ 객체는 key: value 형태
+ *    ㄴ key   => 속성(property, 프로퍼티)
+ *    ㄴ value => 값 
+ */
+console.log(user);
+
+/**
+ *  함수로 객체 데이터 생성
+ *     함수 내부에서 this 라는 키워드를 통해
+ *     각각의 속성의 값을 추가한 방식으로 객체 데이터 생성 
+ */
+function User() {
+    this.name = "HEROPY"
+    this.age = 85
+}
+
+const user = new User();
+
+console.log(user); // User{name: "HEROPY", age: 85}
+
+/**
+ *  기호를 통해 객체 데이터 생성 - 리터럴 방식
+ */
+const user = {
+    name: "HEROPY",
+    age: 85
+}
+
+console.log(user); // {name: "HEROPY", age: 85}
+console.log(user.name);    // 점표기법 - "HEROPY"
+console.log(user["name"]); // 대괄호 표기법 - "HEROPY"
+
+// key를 변수에 담아 이용할 수도 있다
+const key = "name"
+console.log(user[key]);    // 대괄호 표기법 - "HEROPY"
+
+/**
+ *  갹체 데이터 안에 들어있는 각각의 속성들의 이름은 고유하기 떄문에
+ *  순서라는 개념이 없다. 
+ *  먼저 만들었다고 해서 콘솔로그에 동일한 순서로 나오지 않는다는 의미.
+ *  age 라는 속성을 한 개 더 만들어서 30 으로 지정했다면
+ *  마지막에 작성된 age의 값이 적용 된다.
+ */
+const user = {
+    name: "HEROPY",
+    age: 85,
+    age: 30,
+}
+```
+
+### 참조형 - Function
+```javascript
+// 함수 선언문
+function hello() {
+    console.log("hello")
+}
+
+// call (실행)
+hello();
+
+console.log(hello);           // 하나의 데이터 hello { console.log("hello") } 가 출력
+console.log(typeof hello);    // function
+console.log(hello());         // hello() 함수가 실행되어 "hello" 가 출력
+console.log(typeof hello());  // string
+
+// 함수 표현식
+const getNumber = function() {
+    return 123;
+}
+
+// 예제
+const a = function () {
+    console.log("A")
+}
+
+const b = function (c) {
+    console.log(c);
+    c();
+}
+
+b(a);
+/**
+ * console.log(c)
+ *   ㄴ function () { console.log("A") }
+ * c();
+ *   ㄴ "A"
+ */
+```
+
+### 형 변환(Type Conversion)
+```javascript
+const a = 1;   // number
+const b = "1"; // string
+
+// 동등 연산자 ==
+console.log(a == b)  // true
+
+// 일치 연산자 ===
+console.log(a === b) // false
+
+/**
+ *  서로 정확하게! 같은 타입의 데이터인지 비교하기 위해선
+ *  동등 연산자(==) 보단 일치 연산자(===) 을 사용해야 한다!
+ */
+
+// 다른 예시 1
+const a = 0;
+const b = false;
+
+console.log(a == b);  // true
+console.log(a === b); // false
+
+// 다른 예시 2
+const a = 1;
+const b = true;
+
+console.log(a == b);  // true
+console.log(a === b); // false
+```
+
+### 참과 거짓(Truthy & Falsy)
+```javascript
+// 거짓에 해당하는 데이터만 알고 있기
+false
+0
+null
+undefined
+NaN
+''  // 빈 문자열
+0n. // 빅 인트
+```
+
+### 데이터 타입 확인
+```javascript
+console.log(typeof 'Hello' === 'string');          // true
+console.log(typeof 123 === 'number');              // true
+console.log(typeof false === 'boolean');           // true
+console.log(typeof undefined === 'undefined');     // true
+console.log(typeof function () {} === 'function'); // true
+
+// typeof null, []. {} 모두 object로 인식.
+console.log(typeof null === 'object'); // true
+console.log(typeof [] === 'object');   // true
+console.log(typeof {} === 'object');   // true
+
+console.log([].constructor === Array)  // true
+console.log({}.constructor === Object) // true
+
+// null 데이터에는 constructor 없다.
+console.log(Object.prototype.toString.call(null).slice(8, -1) === 'Null') // true
+
+// 데이터 타입 체크 함수
+function checkType(data) {
+    return Object.prototype.toString.call(data).slice(8, -1)
+}
+
+console.log(checkType("Hello") === 'String'); // true
+console.log(checkType(null) === 'Null');      // true
+
+// 데이터 타입 체크 함수 - 타입 이름을 소문자로 변환할 떄
+function checkType(data) {
+    return Object.prototype.toString.call(data).slice(8, -1).toLowerCase();
+}
+
+console.log(checkType("Hello") === 'string'); // true
+console.log(checkType(null) === 'null');      // true
+```

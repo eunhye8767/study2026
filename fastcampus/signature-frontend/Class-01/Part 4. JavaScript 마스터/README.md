@@ -273,15 +273,22 @@ null
 <br />
 
 ### 원시형 - String, Number
+<details>
+  <summary>string (문자열)</summary>
+
 ```javascript
-// string (문자열)
 const string1 = "Hello"
 const string2 = 'hello'
 const string3 = `hello ${string1} ?!` // 템플릿 리터럴 방식
 
 console.log(string1, string2, string3)
+```
+</details>
 
-// number (숫자)
+<details>
+  <summary>number (숫자)</summary>
+
+```javascript
 const number = 123
 const pi = 3.14
 
@@ -328,6 +335,7 @@ console.log(result); // 0.3
 const result = Math.round((0.1 + 0.2) * 10) / 10;
 console.log(result); // 0.3
 ```
+</details>
 
 ### 원시형 - Boolean, null, undefined
 ```javascript

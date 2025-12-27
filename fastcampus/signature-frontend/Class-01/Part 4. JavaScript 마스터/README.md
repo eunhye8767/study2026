@@ -60,17 +60,19 @@ find . -name ".DS_Store" -delete
 ## Ch 01. Node JS
 `Node.js`는 Chrome V8 JavaScript 엔진으로 빌드된 **JavaScript 런타임**(프로그래밍 언어가 동작하는 환경).  
 
+<br />
+
 ### Node.js 다운로드
 - [node 공식 - 다운로드](https://nodejs.org/ko/download)
 - 환경에 맞게 다운로드 설치.
+
+<br />
 
 ### npm
 - `npm`(node package manager)은 전 세계의 개발자들이 만든 다양한 기능(패키지, 모듈)들을 관리.
 - `npm install ???` 으로 설치하여 사용 할 수 있다.
 
-<br />
-
-> npm을 사용하는 이유
+#### npm을 사용하는 이유
 `node.js` 환경에서는 `npm`을 통해 필요한 패키지를 직접 설치하고 버전을 관리하며 사용한다.<br />
 이 방식은 초기에는 설정과 개념을 이해해야 해서 다소 복잡하지만,<br />
 의존성 관리와 확장성이 뛰어나 프로젝트를 체계적으로 관리할 수 있다.<br />
@@ -97,6 +99,8 @@ find . -name ".DS_Store" -delete
 - 팀/대규모 프로젝트에 특히 적합
 - [npm 공홈 바로가기](https://www.npmjs.com/)
 </details>
+
+<br />
 
 ### npm 설치
 <details> 
@@ -151,6 +155,8 @@ npm istall
 node_modules
 ```
 </details>
+
+<br />
 
 ### Parcel, 개발 서버 실행과 빌드
 - [Parcel(파셀) 공홈, 바로가기](https://parceljs.org/)
@@ -219,6 +225,7 @@ node_modules
     ```
 </details>
 
+<br />
 
 ### 유의적 버전(Semver)
 <details>
@@ -369,6 +376,8 @@ console.log(result); // 0.3
 ```
 </details>
 
+<br />
+
 ### 원시형 - Boolean, null, undefined
 <details>
   <summary>Boolean</summary>
@@ -406,6 +415,8 @@ console.log(age); // undefined
 ```
 </details>
 
+<br />
+
 ### 참조형 - Array
 <details>
   <summary>Array (배열)</summary>
@@ -425,6 +436,8 @@ console.log(fruits1.length);     // 총 3개
 console.log(fruits1.length - 1); // 배열의 마지막 인덱스 값을 추출할 떄
 ```
 </details>
+
+<br />
 
 ### 참조형 - Object
 <details>
@@ -497,6 +510,8 @@ const user = {
 ```
 </details>
 
+<br />
+
 ### 참조형 - Function
 <details>
   <summary>함수 선언문</summary>
@@ -544,6 +559,8 @@ b(a);
  */
 ```
 </details>
+
+<br />
 
 ### 형 변환(Type Conversion)
 <details>
@@ -595,6 +612,7 @@ console.log(a === b); // false
 ```
 </details>
 
+<br />
 
 ### 참과 거짓(Truthy & Falsy)
 <details> 
@@ -611,6 +629,8 @@ NaN
 0n. // 빅 인트
 ```
 </details>
+
+<br />
 
 ### 데이터 타입 확인
 <details> 
@@ -657,3 +677,7 @@ console.log(checkType("Hello") === 'string'); // true
 console.log(checkType(null) === 'null');      // true
 ```
 </details>
+
+<br />
+<hr />
+<br />

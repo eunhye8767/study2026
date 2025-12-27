@@ -33,7 +33,6 @@ find . -name ".DS_Store" -delete
 <br />
 
 ## 목차
-## 목차
 - [Ch 01. Node JS](#ch-01-node-js)
   - [Node.js 다운로드](#nodejs-다운로드)
   - [npm](#npm)
@@ -41,9 +40,10 @@ find . -name ".DS_Store" -delete
   - [npm 설치](#npm-설치)
   - [Parcel, 개발 서버 실행과 빌드](#parcel-개발-서버-실행과-빌드)
   - [유의적 버전(Semver)](#유의적-버전semver)
+
 - [Ch 02. JS 데이터](#ch-02-js-데이터)
   - [원시형 - 원시 타입 (Primitive Types)](#원시형---원시-타입-primitive-types)
-    - [원시 타입 vs 객체 타입](#원시-타입-vs-객체-타입)
+  - [원시 타입 vs 객체 타입](#원시-타입-vs-객체-타입)
   - [원시형 - String, Number](#원시형---string-number)
   - [원시형 - Boolean, null, undefined](#원시형---boolean-null-undefined)
   - [참조형 - Array](#참조형---array)
@@ -52,7 +52,6 @@ find . -name ".DS_Store" -delete
   - [형 변환(Type Conversion)](#형-변환type-conversion)
   - [참과 거짓(Truthy & Falsy)](#참과-거짓truthy--falsy)
   - [데이터 타입 확인](#데이터-타입-확인)
-
 
 <br />
 <hr />
@@ -69,15 +68,16 @@ find . -name ".DS_Store" -delete
 - `npm`(node package manager)은 전 세계의 개발자들이 만든 다양한 기능(패키지, 모듈)들을 관리.
 - `npm install ???` 으로 설치하여 사용 할 수 있다.
 
-<details> 
-    <summary>npm을 사용하는 이유</summary>
+<br />
 
+> npm을 사용하는 이유
 `node.js` 환경에서는 `npm`을 통해 필요한 패키지를 직접 설치하고 버전을 관리하며 사용한다.<br />
 이 방식은 초기에는 설정과 개념을 이해해야 해서 다소 복잡하지만,<br />
 의존성 관리와 확장성이 뛰어나 프로젝트를 체계적으로 관리할 수 있다.<br />
 그 결과, 비교적 적은 시간으로도 복잡한 기능을 안정적으로 추가하고 고도화할 수 있다.<br />
 이처럼 초기 복잡함을 감수하고 장기적인 효율을 얻는 선택을 트레이드 오프라고 한다.
-</details>
+
+<br />
 
 ### CDN vs npm
 <details> 

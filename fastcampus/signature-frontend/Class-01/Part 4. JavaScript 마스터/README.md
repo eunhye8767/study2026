@@ -32,26 +32,34 @@ find . -name ".DS_Store" -delete
 <hr />
 <br />
 
-## 목차
-- [Ch 01. Node JS](#ch-01-node-js)
-  - [Node.js 다운로드](#nodejs-다운로드)
-  - [npm](#npm)
-  - [CDN vs npm](#cdn-vs-npm)
-  - [npm 설치](#npm-설치)
-  - [Parcel, 개발 서버 실행과 빌드](#parcel-개발-서버-실행과-빌드)
-  - [유의적 버전(Semver)](#유의적-버전semver)
+<details open>
+    <summary>목차</summary>
 
-- [Ch 02. JS 데이터](#ch-02-js-데이터)
-  - [원시형 - 원시 타입 (Primitive Types)](#원시형---원시-타입-primitive-types)
-  - [원시 타입 vs 객체 타입](#원시-타입-vs-객체-타입)
-  - [원시형 - String, Number](#원시형---string-number)
-  - [원시형 - Boolean, null, undefined](#원시형---boolean-null-undefined)
-  - [참조형 - Array](#참조형---array)
-  - [참조형 - Object](#참조형---object)
-  - [참조형 - Function](#참조형---function)
-  - [형 변환(Type Conversion)](#형-변환type-conversion)
-  - [참과 거짓(Truthy & Falsy)](#참과-거짓truthy--falsy)
-  - [데이터 타입 확인](#데이터-타입-확인)
+<details>
+    <summary>Ch 01. Node JS</summary>
+
+- [1-1. Node.js 다운로드](#1-1-nodejs-다운로드)
+- [1-2. npm](#1-2-npm)
+- [1-3. CDN vs npm](#1-3-cdn-vs-npm)
+- [1-4. npm 설치](#1-4-npm-설치)
+- [1-5. Parcel, 개발 서버 실행과 빌드](#1-5-parcel-개발-서버-실행과-빌드)
+- [1-6. 유의적 버전(Semver)](#1-6-유의적-버전semver)
+</details>
+
+<details>
+    <summary>Ch 02. JS 데이터</summary>
+
+- [2-1. 원시형 - String, Number](#2-1-원시형---string-number)
+- [2-2. 원시형 - Boolean, null, undefined](#2-2-원시형---boolean-null-undefined)
+- [2-3. 참조형 - Array](#2-3-참조형---array)
+- [2-4. 참조형 - Object](#2-4-참조형---object)
+- [2-5. 참조형 - Function](#2-5-참조형---function)
+- [2-6. 형 변환(Type Conversion)](#2-6-형-변환type-conversion)
+- [2-7. 참과 거짓(Truthy & Falsy)](#2-7-참과-거짓truthy--falsy)
+- [2-8. 데이터 타입 확인](#2-8-데이터-타입-확인)
+</details>
+
+</details>
 
 <br />
 <hr />
@@ -62,13 +70,13 @@ find . -name ".DS_Store" -delete
 
 <br />
 
-### Node.js 다운로드
+### 1-1. Node.js 다운로드
 - [node 공식 - 다운로드](https://nodejs.org/ko/download)
 - 환경에 맞게 다운로드 설치.
 
 <br />
 
-### npm
+### 1-2. npm
 - `npm`(node package manager)은 전 세계의 개발자들이 만든 다양한 기능(패키지, 모듈)들을 관리.
 - `npm install ???` 으로 설치하여 사용 할 수 있다.
 
@@ -81,7 +89,7 @@ find . -name ".DS_Store" -delete
 
 <br />
 
-### CDN vs npm
+### 1-3. CDN vs npm
 <details> 
     <summary>CDN 방식</summary>
 
@@ -102,7 +110,7 @@ find . -name ".DS_Store" -delete
 
 <br />
 
-### npm 설치
+### 1-4. npm 설치
 <details> 
     <summary>npm으로 패키지 설치하기</summary>
 
@@ -158,7 +166,7 @@ node_modules
 
 <br />
 
-### Parcel, 개발 서버 실행과 빌드
+### 1-5. Parcel, 개발 서버 실행과 빌드
 - [Parcel(파셀) 공홈, 바로가기](https://parceljs.org/)
 
 <details> 
@@ -227,7 +235,7 @@ node_modules
 
 <br />
 
-### 유의적 버전(Semver)
+### 1-6. 유의적 버전(Semver)
 <details>
     <summary>Major.Minor.Patch</summary>
 
@@ -311,7 +319,7 @@ null
 
 <br />
 
-### 원시형 - String, Number
+### 2-1. 원시형 - String, Number
 <details>
   <summary>string (문자열)</summary>
 
@@ -378,7 +386,7 @@ console.log(result); // 0.3
 
 <br />
 
-### 원시형 - Boolean, null, undefined
+### 2-2. 원시형 - Boolean, null, undefined
 <details>
   <summary>Boolean</summary>
 
@@ -417,7 +425,7 @@ console.log(age); // undefined
 
 <br />
 
-### 참조형 - Array
+### 2-3. 참조형 - Array
 <details>
   <summary>Array (배열)</summary>
 
@@ -439,7 +447,7 @@ console.log(fruits1.length - 1); // 배열의 마지막 인덱스 값을 추출�
 
 <br />
 
-### 참조형 - Object
+### 2-4. 참조형 - Object
 <details>
   <summary>생성자 함수로 객체 데이터 생성</summary>
 
@@ -512,7 +520,7 @@ const user = {
 
 <br />
 
-### 참조형 - Function
+### 2-5. 참조형 - Function
 <details>
   <summary>함수 선언문</summary>
 
@@ -562,7 +570,7 @@ b(a);
 
 <br />
 
-### 형 변환(Type Conversion)
+### 2-6. 형 변환(Type Conversion)
 <details>
   <summary>동등 연산자 ==</summary>
 
@@ -614,7 +622,7 @@ console.log(a === b); // false
 
 <br />
 
-### 참과 거짓(Truthy & Falsy)
+### 2-7. 참과 거짓(Truthy & Falsy)
 <details> 
     <summary>거짓에 해당하는 데이터만 알고 있기</summary>
 
@@ -632,7 +640,7 @@ NaN
 
 <br />
 
-### 데이터 타입 확인
+### 2-8. 데이터 타입 확인
 <details> 
     <summary>데이터 타입 확인 (typeof / constructor / toString)</summary>
 

@@ -36,40 +36,40 @@ find . -name ".DS_Store" -delete
 <details>
     <summary>Ch 01. Node JS</summary>
 
-    - [1-1. Node.js 다운로드](#1-1-nodejs-다운로드)
-    - [1-2. npm](#1-2-npm)
-    - [1-3. CDN vs npm](#1-3-cdn-vs-npm)
-    - [1-4. npm 설치](#1-4-npm-설치)
-    - [1-5. Parcel, 개발 서버 실행과 빌드](#1-5-parcel-개발-서버-실행과-빌드)
-    - [1-6. 유의적 버전(Semver)](#1-6-유의적-버전semver)
+- [1-1. Node.js 다운로드](#1-1-nodejs-다운로드)
+- [1-2. npm](#1-2-npm)
+- [1-3. CDN vs npm](#1-3-cdn-vs-npm)
+- [1-4. npm 설치](#1-4-npm-설치)
+- [1-5. Parcel, 개발 서버 실행과 빌드](#1-5-parcel-개발-서버-실행과-빌드)
+- [1-6. 유의적 버전(Semver)](#1-6-유의적-버전semver)
 </details>
 
 <details>
     <summary>Ch 02. JS 데이터</summary>
 
-    - [2-1. 원시형 - String, Number](#2-1-원시형---string-number)
-    - [2-2. 원시형 - Boolean, null, undefined](#2-2-원시형---boolean-null-undefined)
-    - [2-3. 참조형 - Array](#2-3-참조형---array)
-    - [2-4. 참조형 - Object](#2-4-참조형---object)
-    - [2-5. 참조형 - Function](#2-5-참조형---function)
-    - [2-6. 형 변환(Type Conversion)](#2-6-형-변환type-conversion)
-    - [2-7. 참과 거짓(Truthy & Falsy)](#2-7-참과-거짓truthy--falsy)
-    - [2-8. 데이터 타입 확인](#2-8-데이터-타입-확인)
+- [2-1. 원시형 - String, Number](#2-1-원시형---string-number)
+- [2-2. 원시형 - Boolean, null, undefined](#2-2-원시형---boolean-null-undefined)
+- [2-3. 참조형 - Array](#2-3-참조형---array)
+- [2-4. 참조형 - Object](#2-4-참조형---object)
+- [2-5. 참조형 - Function](#2-5-참조형---function)
+- [2-6. 형 변환(Type Conversion)](#2-6-형-변환type-conversion)
+- [2-7. 참과 거짓(Truthy & Falsy)](#2-7-참과-거짓truthy--falsy)
+- [2-8. 데이터 타입 확인](#2-8-데이터-타입-확인)
 </details>
 
 <details>
     <summary>Ch 03. 연산자와 구문</summary>
 
-    - [3-1. 산술, 할당, 증감 연산자](#3-1-산술-할당-증감-연산자)
-    - [3-2. 부정, 비교 연산자](#3-2-부정-비교-연산자)
-    - [3-3. 논리 연산자](#3-3-논리-연산자)
-    - [3-4. Nullish 병합, 삼항 연산자](#3-4-nullish-병합-삼항-연산자)
-    - [3-5. 전개 연산자](#3-5-전개-연산자)
-    - [3-6. 구조 분해 할당(Destructuring assignment)](#3-6-구조-분해-할당destructuring-assignment)
-    - [3-7. 선택적 체이닝](#3-7-선택적-체이닝)
-    - [3-8. if, Switch 조건문](#3-8-if-switch-조건문)
-    - [3-9. For, For of, For in 반복문](#3-9-for-for-of-for-in-반복문)
-    - [3-10. While, Do while 반복문](#3-10-while-do-while-반복문)
+- [3-1. 산술, 할당, 증감 연산자](#3-1-산술-할당-증감-연산자)
+- [3-2. 부정, 비교 연산자](#3-2-부정-비교-연산자)
+- [3-3. 논리 연산자](#3-3-논리-연산자)
+- [3-4. Nullish 병합, 삼항 연산자](#3-4-nullish-병합-삼항-연산자)
+- [3-5. 전개 연산자](#3-5-전개-연산자)
+- [3-6. 구조 분해 할당(Destructuring assignment)](#3-6-구조-분해-할당destructuring-assignment)
+- [3-7. 선택적 체이닝](#3-7-선택적-체이닝)
+- [3-8. if, Switch 조건문](#3-8-if-switch-조건문)
+- [3-9. For, For of, For in 반복문](#3-9-for-for-of-for-in-반복문)
+- [3-10. While, Do while 반복문](#3-10-while-do-while-반복문)
 </details>
 
 <br />
